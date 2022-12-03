@@ -55,7 +55,6 @@ class GuessMyNumber {
   _playGame() {
     // get guess
     const guess = Number(this._guessContainer.value);
-    console.log("guess", guess);
     if (!guess) {
       this._displayMessage("⛔ No number!");
     } else if (guess === this._state.secretNumber) {
