@@ -10,15 +10,19 @@ class GuessMyNumber {
   _highScoreContainer = document.querySelector(".highscore");
   _againBtn = document.querySelector(".again");
 
-  _state = {
-    secretNumber: Math.trunc(Math.random() * 20) + 1,
-    score: 20,
-    highScore: 0,
-  };
-
   constructor() {
+    this._init();
     this.handlerPlayGame();
     this.handlerResetGame();
+  }
+
+  _init() {
+    this._state = {
+      secretNumber: Math.trunc(Math.random() * 20) + 1,
+      score: 20,
+      highScore: 0,
+    };
+    this._guessContainer.value = "";
   }
 
   _displayMessage(message) {
